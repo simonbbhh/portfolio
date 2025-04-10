@@ -1,0 +1,255 @@
+/* Reset básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
+    background-color: #121212; /* negro suave */
+    color: #f1f1f1;
+    line-height: 1.6;
+    padding-top: 120px;
+  }
+  
+  /* Header fijo */
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1e1e1e;
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
+  
+  header h1 {
+    font-size: 1.8rem;
+    color: #00e676;
+    margin: 0;
+  }
+  
+  /* Navbar */
+  .nav-bar {
+    position: fixed;
+    top: 70px;
+    width: 100%;
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0.8rem 1rem;
+    z-index: 999;
+  }
+  
+  .nav-bar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+  }
+  
+  .nav-bar a:hover,
+  .nav-bar a.active {
+    background-color: #00e676;
+    color: #121212;
+  }
+  
+  /* Títulos */
+  h2 {
+    font-size: 1.8rem;
+    text-align: center;
+    margin: 2rem 0 1rem;
+  }
+  
+  /* Galería */
+  .galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+    margin: auto;
+    max-width: 1200px;
+  }
+  
+  .galeria img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .galeria img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Modales estilo lightbox */
+  .modal-imagen {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 10, 10, 0.95);
+    overflow-y: auto;
+    padding: 2rem;
+  }
+  
+  .modal-imagen:target {
+    display: block;
+  }
+  
+  .cerrar-imagen {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    color: #ccc;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .cerrar-imagen:hover {
+    color: #fff;
+  }
+  
+  .modal-contenido {
+    max-width: 800px;
+    margin: 5rem auto;
+    background: #1f1f1f;
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .modal-contenido img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+  }
+  
+  .info-imagen {
+    text-align: left;
+  }
+  
+  .info-imagen p {
+    font-size: 1rem;
+  }
+  
+  /* Sección comisiones */
+  .comisiones {
+    background-color: #1a1a1a;
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  
+  .comisiones h2 {
+    color: #00e676;
+  }
+  
+  .comisiones p {
+    margin: 1rem auto 2rem;
+    max-width: 600px;
+    font-size: 1.1rem;
+    color: #ccc;
+  }
+  
+  .comisiones a {
+    display: inline-block;
+    padding: 0.7rem 1.5rem;
+    background-color: #00e676;
+    color: #121212;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .comisiones a:hover {
+    background-color: #00c067;
+  }
+  
+  .comisiones img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 1.5rem;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #1e1e1e;
+    color: #888;
+    font-size: 0.9rem;
+    margin-top: 4rem;
+  }
+  /* Estilización básica de todos los <p> */
+p {
+  font-size: 1.1rem;              /* Tamaño de fuente moderado */
+  line-height: 1.8;               /* Altura de línea para una buena separación entre líneas */
+  color: #e5e7eb;                 /* Color de texto claro (gris muy suave) para buen contraste */
+  margin-bottom: 1.5rem;          /* Espacio inferior entre los párrafos */
+  text-align: justify;            /* Alinea el texto a la izquierda y derecha */
+  max-width: 800px;               /* Limita el ancho de los párrafos para que no sean demasiado largos */
+  margin-left: auto;              /* Centra el párrafo en la página */
+  margin-right: auto;
+  padding: 0 1rem;                /* Añade un poco de relleno a los lados */
+}
+/* Estilo general para la sección de contacto */
+.contact-section #contacto {
+  background-color: rgba(255, 255, 255, 0.05); /* Fondo suave */
+  padding: 3rem 1.5rem;
+  border-radius: 1rem;
+  max-width: 800px;
+  margin: 2rem auto;
+  color: #e5e7eb;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Otros estilos como los de los enlaces, párrafos, etc. */
+.contact-section #contacto h2 {
+  font-size: 2rem;
+  color: #88ccff;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.contact-section #contacto p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #d1d5db;
+  margin-bottom: 2rem;
+}
+
+.contact-section #contacto a {
+  color: #88ccff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.contact-section #contacto a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+/* Eliminar viñetas (puntos) de los elementos de la lista */
+#contacto ul {
+  list-style-type: none;  /* Quita los puntos de la lista */
+  padding-left: 0;        /* Elimina el espacio extra a la izquierda */
+}
+
+/* Opcional: Puedes agregar un poco de espacio entre los elementos de la lista */
+#contacto ul li {
+  margin-bottom: 1rem;    /* Espaciado entre elementos de lista */
+}
